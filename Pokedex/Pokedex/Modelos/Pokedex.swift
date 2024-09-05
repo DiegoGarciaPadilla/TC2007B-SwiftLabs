@@ -26,7 +26,10 @@ struct Sprite {
     var back_default: String
 }
 
-struct PokemonBase {
+struct PokemonBase : Identifiable {
+    
+    var id: Int
+    
     var pokemon: Pokemon
     var perfil: Perfil
 }
