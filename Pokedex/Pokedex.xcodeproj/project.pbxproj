@@ -16,6 +16,10 @@
 		7B6EC8A12C87DD560089727D /* PokedexUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B6EC8A02C87DD560089727D /* PokedexUITestsLaunchTests.swift */; };
 		7B6EC8B12C8950E30089727D /* Pokedex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B6EC8B02C8950E30089727D /* Pokedex.swift */; };
 		7B6EC8B32C8A41270089727D /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 7B6EC8B22C8A41270089727D /* SDWebImageSwiftUI */; };
+		7B6EC8BA2C8A679A0089727D /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 7B6EC8B92C8A679A0089727D /* Alamofire */; };
+		7B6EC8BC2C8A697D0089727D /* PokemonAPIProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B6EC8BB2C8A697D0089727D /* PokemonAPIProtocol.swift */; };
+		7B6EC8BE2C8A6C630089727D /* PokemonRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B6EC8BD2C8A6C630089727D /* PokemonRepository.swift */; };
+		7B6EC8C02C8A8C990089727D /* NetworkAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B6EC8BF2C8A8C990089727D /* NetworkAPIService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +51,9 @@
 		7B6EC89E2C87DD560089727D /* PokedexUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokedexUITests.swift; sourceTree = "<group>"; };
 		7B6EC8A02C87DD560089727D /* PokedexUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokedexUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		7B6EC8B02C8950E30089727D /* Pokedex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pokedex.swift; sourceTree = "<group>"; };
+		7B6EC8BB2C8A697D0089727D /* PokemonAPIProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonAPIProtocol.swift; sourceTree = "<group>"; };
+		7B6EC8BD2C8A6C630089727D /* PokemonRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonRepository.swift; sourceTree = "<group>"; };
+		7B6EC8BF2C8A8C990089727D /* NetworkAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkAPIService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +62,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7B6EC8B32C8A41270089727D /* SDWebImageSwiftUI in Frameworks */,
+				7B6EC8BA2C8A679A0089727D /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -103,6 +111,9 @@
 				7B6EC8852C87DD550089727D /* ContentView.swift */,
 				7B6EC8872C87DD560089727D /* Assets.xcassets */,
 				7B6EC8892C87DD560089727D /* Preview Content */,
+				7B6EC8BB2C8A697D0089727D /* PokemonAPIProtocol.swift */,
+				7B6EC8BD2C8A6C630089727D /* PokemonRepository.swift */,
+				7B6EC8BF2C8A8C990089727D /* NetworkAPIService.swift */,
 			);
 			path = Pokedex;
 			sourceTree = "<group>";
@@ -158,6 +169,7 @@
 			name = Pokedex;
 			packageProductDependencies = (
 				7B6EC8B22C8A41270089727D /* SDWebImageSwiftUI */,
+				7B6EC8B92C8A679A0089727D /* Alamofire */,
 			);
 			productName = Pokedex;
 			productReference = 7B6EC8802C87DD550089727D /* Pokedex.app */;
@@ -233,6 +245,7 @@
 			mainGroup = 7B6EC8772C87DD550089727D;
 			packageReferences = (
 				7B6EC8AE2C87E0F10089727D /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+				7B6EC8B82C8A679A0089727D /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = 7B6EC8812C87DD550089727D /* Products */;
 			projectDirPath = "";
@@ -276,7 +289,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B6EC8BC2C8A697D0089727D /* PokemonAPIProtocol.swift in Sources */,
+				7B6EC8BE2C8A6C630089727D /* PokemonRepository.swift in Sources */,
 				7B6EC8862C87DD550089727D /* ContentView.swift in Sources */,
+				7B6EC8C02C8A8C990089727D /* NetworkAPIService.swift in Sources */,
 				7B6EC8842C87DD550089727D /* PokedexApp.swift in Sources */,
 				7B6EC8B12C8950E30089727D /* Pokedex.swift in Sources */,
 			);
@@ -612,6 +628,14 @@
 				minimumVersion = 3.1.2;
 			};
 		};
+		7B6EC8B82C8A679A0089727D /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.9.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -619,6 +643,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 7B6EC8AE2C87E0F10089727D /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
 			productName = SDWebImageSwiftUI;
+		};
+		7B6EC8B92C8A679A0089727D /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7B6EC8B82C8A679A0089727D /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
