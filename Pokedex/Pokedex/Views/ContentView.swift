@@ -10,10 +10,10 @@ import SDWebImageSwiftUI
 
 struct ContentView: View {
     
-    @State var pokemonList = [PokemonBase]()
+    @StateObject var contentViewModel = ContentViewModel()
     
     var body: some View {
-        List(pokemonList) { pokemonBase in
+        List(contentViewModel.pokemonList) { pokemonBase in
             HStack() {
                 WebImage(url: URL(string: pokemonBase.perfil?.sprites.front_default ?? ""))
                    .resizable()
@@ -23,7 +23,7 @@ struct ContentView: View {
             }
         }.onAppear {
             Task {
-                await getPokemonList()
+                await contentViewModel.getPokemonList()
             }
         }
     }
