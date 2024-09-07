@@ -27,29 +27,6 @@ struct ContentView: View {
             }
         }
     }
-<<<<<<< HEAD
-=======
-    
-    func getPokemonList() async {
-        
-        let pokemonRepository = PokemonRepository()
-        
-        let result = await pokemonRepository.getPokemonList(limit: 1279)
-        
-        var tempPokemonList = [PokemonBase]()
-        
-        for pokemon in result!.results {
-            let numberPokemon = Int(pokemon.url.split(separator: "/")[5])!
-            
-            let infoPokemon = await pokemonRepository.getPokemonInfo(numberPokemon: numberPokemon)
-            
-            let tempPokemon = PokemonBase(id: numberPokemon, pokemon: pokemon, perfil: infoPokemon)
-            
-            tempPokemonList.append(tempPokemon)
-        }
-        pokemonList = tempPokemonList
-    }
->>>>>>> origin/main
 }
 
 #Preview {
